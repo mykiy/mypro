@@ -1,0 +1,30 @@
+ <div class="form">
+    <div class="row">
+    <div class="container">
+    <div class="col-md-6 col-sm-6 col-xs-6">
+    <div class="form_group">
+     <div class="para ">
+     <p class="text">Join to a <b> Centralize system</b></p><br>
+     <p class="status"> <b class="active">A </b> Student <b class="repo">repository</b> monitoring</p>
+     </div>
+     <br><br>
+       <%= form_for(:session, url: login_path) do |f| %> 
+  			<div class="form_control">
+  			   <span class="glyphicon glyphicon-user"></span>
+  				<%= f.email_field :email, :placeholder => "Email" , class: 'form_control' %> 
+  				
+  			</div>
+ 			 <div class="form_control">
+ 			    <span class="glyphicon glyphicon-lock"> </span>
+ 				 <%= f.password_field :password, :placeholder => "Password" , class: 'form_control' %> 
+ 				
+ 			 </div>
+ 			 <div class="loading">
+ 				 <%= f.submit "Log in", class: "btn-submit" %>
+ 			 </div>
+		<% end %>
+	</div>
+	</div>
+	</div>
+</div>
+</div>

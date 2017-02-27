@@ -1,0 +1,6 @@
+<h1>The files</h1>
+<%= link_to "New Resume", attaches_new_path, class: "btn btn-primary" %>
+<% @attaches.each do |a| %>
+	<%= a.name %><br>
+	<%= link_to "Download Resume", a.attachment_url %>
+<% end %>

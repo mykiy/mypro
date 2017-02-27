@@ -1,0 +1,31 @@
+<% if !@attach.errors.empty? %>
+   <div class = "alert alert-error">
+      
+      <ul>
+         <% @attach.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+      
+   </div>
+<% end %>
+
+<div class="attach">
+<div class="row">
+<div class="container">
+<div class="col-md-6 col-xs-6 col-sm-6">
+<div class = "form_group">
+
+   <%= form_for @attach, html: { multipart: true } do |f| %>
+      
+      <span class="glyphicon glyphicon-file"></span>      
+      <%= f.text_field :name , class: 'form_control', placeholder:'name' %>
+      
+      <%= f.file_field :attachment, class: 'form_control' %>
+      <%= f.submit "Save", class: "btn-submit" %>
+   <% end %>
+</div>
+</div>
+</div>
+</div>
+</div>
